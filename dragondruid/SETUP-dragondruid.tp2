@@ -1,0 +1,633 @@
+BACKUP ~dragondruid\backup~
+AUTHOR ~wingofnethalrion@hotmail.com~
+
+LANGUAGE ~Chinese(Simplified)~ ~chinese~ ~dragondruid\language\chinese\chinese.tra~
+
+BEGIN @1
+
+ACTION_IF GAME_IS ~bgee bg2ee eet~ OR FILE_EXISTS_IN_GAME BD1000.are THEN BEGIN
+
+	INCLUDE ~dragondruid/lib/fl#add_kit_ee.tpa~
+
+ADD_KIT ~DRADRUID~
+~DRADRUID 1 0 1 1 0 0 0 1~
+~DRADRUID 0 0 0 0 3 3 0 3 0 0 0 0 0 0 3 3 0 3 3 0 0 0 3 0 0 0 3 3 2 2 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~DRADRUID 0 0 0 0 0 0~
+~DRADRUID 0 -3 0 0 0 -3~
+~DRADRUID 17 0 0 0 15 15~
+~DRADRUID 17 0 0 0 15 15~
+~DRADRUID 0 1 0 1 1 1 0 1 0~
+~DRADRUID 1 0 0 0 0 0~
+~dragondruid\2da\clabdrd.2DA~
+~k_d_h~
+~0x10000000 11~
+~drd~
+~* * * BAG29 RING06 RING40 * BOOT01 AMUL21 BRAC15 BELT10 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN4,2 POTN14,5 SLNG05 DAGG05,40 STAF20~
+SAY @2
+SAY @2
+SAY @3
+
+	LAF fl#add_kit_ee
+	  STR_VAR
+	    kit_name = DRADRUID
+	END
+	
+END
+
+
+COPY ~dragondruid\2da\ludrd.2da~        ~override\ludrd.2da~
+COPY ~dragondruid\2da\clabdrd.2da~      ~override\clabdrd.2da~
+
+COPY ~dragondruid\spells\ddsp703.spl~   ~override\ddsp703.spl~
+COPY ~dragondruid\spells\ddsp603.spl~   ~override\ddsp603.spl~
+
+COPY ~dragondruid\spells\ddsp101.spl~   ~override\ddsp101.spl~
+COPY ~dragondruid\spells\ddsp202.spl~   ~override\ddsp202.spl~
+COPY ~dragondruid\spells\ddsp301.spl~   ~override\ddsp301.spl~
+
+COPY ~dragondruid\spells\ddsp404.spl~   ~override\ddsp404.spl~
+COPY ~dragondruid\spells\ddsp503.spl~   ~override\ddsp503.spl~
+COPY ~dragondruid\spells\ddsp701.spl~   ~override\ddsp701.spl~
+
+COPY ~dragondruid\wskill\ddcl904.spl~   ~override\ddcl904.spl~
+SAY NAME1 @129
+SAY UNIDENTIFIED_DESC @137
+
+COPY ~dragondruid\wskill\ddsx32.spl~   ~override\ddsx32.spl~
+SAY NAME1 @178
+SAY UNIDENTIFIED_DESC @238
+
+COPY ~dragondruid\wskill\ddcl905.eff~   ~override\ddcl905.eff~
+
+ADD_PROJECTILE  ~dragondruid\pro\dd!pro9.pro~
+COPY ~dragondruid\wskill\ddcl906.spl~   ~override\ddcl906.spl~
+WRITE_SHORT 0x98 ~%dd!pro9%~
+
+COPY ~dragondruid\wskill\ddcl917.eff~   ~override\ddcl917.eff~
+
+COPY ~dragondruid\wskill\ddcl918.spl~   ~override\ddcl918.spl~
+SAY NAME1 @172
+
+COPY ~dragondruid\wskill\ddcl908.eff~   ~override\ddcl908.eff~
+
+COPY ~dragondruid\wskill\ddcl909.spl~   ~override\ddcl909.spl~
+SAY NAME1 @130
+
+COPY ~dragondruid\wskill\ddcl910.spl~   ~override\ddcl910.spl~
+SAY NAME1 @143
+SAY UNIDENTIFIED_DESC @144
+
+COPY ~dragondruid\wskill\ddcl911.eff~   ~override\ddcl911.eff~
+
+COPY ~dragondruid\wskill\ddcl912.spl~   ~override\ddcl912.spl~
+
+COPY ~dragondruid\wskill\ddcl914.eff~   ~override\ddcl914.eff~
+
+COPY ~dragondruid\wskill\ddcl915.spl~   ~override\ddcl915.spl~
+SAY NAME1 @149
+
+COPY ~dragondruid\2da\ddsx25b.2da~     ~override\ddsx25b.2da~
+COPY ~dragondruid\spells\ddsx25.spl~   ~override\ddsx25.spl~
+SAY NAME1 @10
+SAY UNIDENTIFIED_DESC @11
+
+COPY ~dragondruid\spells\ddsp104.spl~   ~override\ddsp104.spl~
+SAY NAME1 @12
+SAY UNIDENTIFIED_DESC @13
+
+COPY ~dragondruid\spells\ddsp105b.itm~   ~override\ddsp105b.itm~
+SAY NAME2 @114
+SAY IDENTIFIED_DESC @115
+
+COPY ~dragondruid\spells\ddsp105.spl~    ~override\ddsp105.spl~
+SAY NAME1 @112
+SAY UNIDENTIFIED_DESC @113
+
+COPY ~dragondruid\spells\ddsx16.spl~    ~override\ddsx16.spl~
+SAY NAME1 @66
+SAY UNIDENTIFIED_DESC @67
+
+COPY ~dragondruid\spells\ddsp201.spl~   ~override\ddsp201.spl~
+SAY NAME1 @14
+SAY UNIDENTIFIED_DESC @15
+
+COPY ~dragondruid\spells\ddsp204b.spl~    ~override\ddsp204b.spl~
+COPY ~dragondruid\spells\ddsp204.spl~     ~override\ddsp204.spl~
+SAY NAME1 @118
+SAY UNIDENTIFIED_DESC @119
+
+COPY ~dragondruid\spells\ddsp302b.spl~   ~override\ddsp302b.spl~
+
+COPY ~dragondruid\spells\ddsp302.spl~    ~override\ddsp302.spl~
+SAY NAME1 @16
+SAY UNIDENTIFIED_DESC @17
+
+COPY ~dragondruid\spells\ddsp303b.itm~   ~override\ddsp303b.itm~
+SAY NAME2 @116
+
+COPY ~dragondruid\spells\ddsp303.spl~    ~override\ddsp303.spl~
+SAY NAME1 @116
+SAY UNIDENTIFIED_DESC @117
+
+COPY ~dragondruid\spells\ddsp402c.itm~   ~override\ddsp402c.itm~
+SAY NAME2 @18
+
+COPY ~dragondruid\spells\ddsp402.spl~   ~override\ddsp402.spl~
+SAY NAME1 @18
+SAY UNIDENTIFIED_DESC @19
+
+COPY ~dragondruid\spells\ddsx19.spl~   ~override\ddsx19.spl~
+SAY NAME1 @20
+SAY UNIDENTIFIED_DESC @21
+
+COPY ~dragondruid\spells\ddsp501.spl~   ~override\ddsp501.spl~
+SAY NAME1 @22
+SAY UNIDENTIFIED_DESC @23
+
+COPY ~dragondruid\spells\ddsp502b.itm~   ~override\ddsp502b.itm~
+SAY NAME2 @124
+
+COPY ~dragondruid\spells\ddsp502.spl~    ~override\ddsp502.spl~
+SAY NAME1 @122
+SAY UNIDENTIFIED_DESC @123
+
+COPY ~dragondruid\spells\ddsp504.spl~   ~override\ddsp504.spl~
+SAY NAME1 @155
+SAY UNIDENTIFIED_DESC @156
+
+ADD_PROJECTILE  ~dragondruid\pro\dd!pro5.pro~
+COPY ~dragondruid\spells\ddsp505.spl~        ~override\ddsp505.spl~
+SAY NAME1 @227
+SAY UNIDENTIFIED_DESC @228
+WRITE_SHORT 0x98 ~%dd!pro5%~
+
+ADD_PROJECTILE      ~dragondruid\pro\dd!pro3.PRO~
+COPY ~dragondruid\spells\ddsp604.spl~    ~override\ddsp604.spl~
+SAY NAME1 @24
+SAY UNIDENTIFIED_DESC @25
+WRITE_SHORT 0x98 ~%dd!pro3%~
+
+COPY ~dragondruid\spells\ddsp604d.spl~    ~override\ddsp604d.spl~
+
+COPY ~dragondruid\spells\ddsx30b.spl~   ~override\ddsx30b.spl~
+
+COPY ~dragondruid\spells\ddsp601.spl~   ~override\ddsp601.spl~
+SAY NAME1 @26
+SAY UNIDENTIFIED_DESC @27
+
+COPY ~dragondruid\spells\ddsp602.spl~   ~override\ddsp602.spl~
+SAY NAME1 @157
+SAY UNIDENTIFIED_DESC @158
+
+ADD_PROJECTILE      ~dragondruid\pro\dd!pro0.PRO~
+COPY ~dragondruid\spells\ddsp702.spl~   ~override\ddsp702.spl~
+SAY NAME1 @185
+SAY UNIDENTIFIED_DESC @186
+WRITE_SHORT 0x98 ~%dd!pro0%~
+
+COPY ~dragondruid\spells\ddx001.spl~   ~override\ddx001.spl~
+SAY NAME1 @34
+
+COPY ~dragondruid\spells\ddx002.spl~   ~override\ddx002.spl~
+SAY NAME1 @34
+
+COPY ~dragondruid\spells\ddx002x.spl~   ~override\ddx002x.spl~
+
+COPY ~dragondruid\spells\ddx002b.itm~   ~override\ddx002b.itm~
+SAY NAME1 @180
+SAY NAME2 @180
+SAY UNIDENTIFIED_DESC @181
+SAY IDENTIFIED_DESC @181
+
+COMPILE ~dragondruid\todrared\ddr!x002.baf~
+
+COPY ~dragondruid\spells\ddx003.spl~   ~override\ddx003.spl~
+SAY NAME1 @34
+
+COPY ~dragondruid\spells\ddx004.spl~   ~override\ddx004.spl~
+SAY NAME1 @34
+
+COPY ~dragondruid\spells\ddx005.spl~   ~override\ddx005.spl~
+SAY NAME1 @34
+
+COPY ~dragondruid\spells\ddx006.spl~   ~override\ddx006.spl~
+SAY NAME1 @34
+
+COPY ~dragondruid\breath\ddx020.spl~   ~override\ddx020.spl~
+SAY NAME1 @111
+
+COPY ~dragondruid\breath\ddx020b.spl~   ~override\ddx020b.spl~
+SAY NAME1 @132
+SAY UNIDENTIFIED_DESC @136
+
+COPY ~dragondruid\breath\ddx020c.spl~   ~override\ddx020c.spl~
+SAY NAME1 @135
+
+COPY ~dragondruid\spells\ddx009.spl~   ~override\ddx009.spl~
+SAY NAME1 @35
+
+COPY ~dragondruid\spells\ddx011.spl~   ~override\ddx011.spl~
+COPY ~dragondruid\spells\ddx012.spl~   ~override\ddx012.spl~
+COPY ~dragondruid\spells\ddx013.spl~   ~override\ddx013.spl~
+
+COPY ~dragondruid\spells\ddsx35.spl~   ~override\ddsx35.spl~
+SAY NAME1 @147
+SAY UNIDENTIFIED_DESC @148
+
+COPY ~dragondruid\spells\ddsx33.spl~   ~override\ddsx33.spl~
+SAY NAME1 @141
+SAY UNIDENTIFIED_DESC @142
+
+COPY ~dragondruid\spells\ddsx36.spl~   ~override\ddsx36.spl~
+SAY NAME1 @170
+SAY UNIDENTIFIED_DESC @171
+
+COPY ~dragondruid\spells\ddsx37.spl~   ~override\ddsx37.spl~
+SAY NAME1 @176
+SAY UNIDENTIFIED_DESC @177
+
+COPY ~dragondruid\spells\ddsx00.spl~   ~override\ddsx00.spl~
+SAY NAME1 @36
+SAY UNIDENTIFIED_DESC @37
+
+COPY ~dragondruid\spells\ddsx34.spl~   ~override\ddsx34.spl~
+SAY NAME1 @145
+SAY UNIDENTIFIED_DESC @146
+
+COPY ~dragondruid\todrared\ddx016.itm~   ~override\ddx016.itm~
+SAY NAME1 @140
+SAY NAME2 @140
+
+COPY ~dragondruid\todrared\ddx015.spl~   ~override\ddx015.spl~
+SAY NAME1 @56
+SAY UNIDENTIFIED_DESC @57
+
+COPY ~dragondruid\spells\ddx010.spl~   ~override\ddx010.spl~
+SAY NAME1 @58
+SAY UNIDENTIFIED_DESC @59
+
+COPY ~dragondruid\spells\ddsx18e.spl~   ~override\ddsx18e.spl~
+COPY ~dragondruid\spells\ddsx18d.spl~   ~override\ddsx18d.spl~
+COPY ~dragondruid\spells\ddsx18c.spl~   ~override\ddsx18c.spl~
+COPY ~dragondruid\spells\ddsx18b.spl~   ~override\ddsx18b.spl~
+COPY ~dragondruid\spells\ddsx18.spl~    ~override\ddsx18.spl~
+SAY NAME1 @62
+
+COPY ~dragondruid\spells\ddsx17c.spl~   ~override\ddsx17c.spl~
+COPY ~dragondruid\spells\ddsx17b.spl~   ~override\ddsx17b.spl~
+COPY ~dragondruid\spells\ddsx17a.spl~   ~override\ddsx17a.spl~
+SAY NAME1 @64
+
+COPY ~dragondruid\spells\ddsp403b.spl~   ~override\ddsp403b.spl~
+COPY ~dragondruid\spells\ddsp403c.spl~   ~override\ddsp403c.spl~
+COPY ~dragondruid\spells\ddsp403.spl~    ~override\ddsp403.spl~
+SAY NAME1 @127
+
+COPY ~dragondruid\spells\ddsx15b.spl~   ~override\ddsx15b.spl~
+COPY ~dragondruid\spells\ddsx15.spl~    ~override\ddsx15.spl~
+SAY NAME1 @70
+
+COPY ~dragondruid\spells\ddsx05.spl~   ~override\ddsx05.spl~
+SAY NAME1 @73
+SAY UNIDENTIFIED_DESC @74
+
+COPY ~dragondruid\spells\ddsx13d.spl~    ~override\ddsx13d.spl~
+COPY ~dragondruid\spells\ddsx13.spl~     ~override\ddsx13.spl~
+SAY NAME1 @79
+
+COPY ~dragondruid\spells\ddsx29d.spl~   ~override\ddsx29d.spl~
+COPY ~dragondruid\spells\ddsx29c.spl~   ~override\ddsx29c.spl~
+COPY ~dragondruid\spells\ddsx29b.spl~   ~override\ddsx29b.spl~
+COPY ~dragondruid\spells\ddsx29.spl~    ~override\ddsx29.spl~
+SAY NAME1 @77
+
+COPY ~dragondruid\shadow\ddsd0a.spl~   ~override\ddsd0a.spl~
+SAY NAME1 @161
+SAY UNIDENTIFIED_DESC @168
+
+COPY ~dragondruid\shadow\ddsd01.spl~   ~override\ddsd01.spl~
+SAY NAME1 @161
+SAY UNIDENTIFIED_DESC @168
+
+COPY ~dragondruid\shadow\ddsd02.eff~   ~override\ddsd02.eff~
+COPY ~dragondruid\shadow\ddsd03.eff~   ~override\ddsd03.eff~
+COPY ~dragondruid\shadow\ddsd04.eff~   ~override\ddsd04.eff~
+
+COPY ~dragondruid\shadow\ddsd05.cre~   ~override\ddsd05.cre~
+SAY NAME1 @165
+SAY NAME2 @165
+
+COPY ~dragondruid\shadow\ddsd06.cre~   ~override\ddsd06.cre~
+SAY NAME1 @164
+SAY NAME2 @164
+
+COPY ~dragondruid\shadow\ddsd07.cre~   ~override\ddsd07.cre~
+SAY NAME1 @163
+SAY NAME2 @163
+
+COPY ~dragondruid\shadow\ddsd0b.spl~   ~override\ddsd0b.spl~
+SAY NAME1 @162
+SAY UNIDENTIFIED_DESC @169
+
+COPY ~dragondruid\shadow\ddsd08.spl~   ~override\ddsd08.spl~
+SAY NAME1 @162
+SAY UNIDENTIFIED_DESC @169
+
+COPY ~dragondruid\shadow\ddsd09.eff~   ~override\ddsd09.eff~
+COPY ~dragondruid\shadow\ddsd10.eff~   ~override\ddsd10.eff~
+COPY ~dragondruid\shadow\ddsd11.eff~   ~override\ddsd11.eff~
+
+COPY ~dragondruid\shadow\ddsd12.cre~   ~override\ddsd12.cre~
+SAY NAME1 @167
+SAY NAME2 @167
+
+COPY ~dragondruid\shadow\ddsd13.cre~   ~override\ddsd13.cre~
+SAY NAME1 @166
+SAY NAME2 @166
+
+COPY ~dragondruid\shadow\ddsd14.cre~   ~override\ddsd14.cre~
+SAY NAME1 @163
+SAY NAME2 @163
+
+COPY ~dragondruid\coin\ddsx0e.spl~   ~override\ddsx0e.spl~
+SAY NAME1 @106
+SAY UNIDENTIFIED_DESC @107
+
+COPY ~dragondruid\coin\ddsx0a.spl~   ~override\ddsx0a.spl~
+SAY NAME1 @103
+SAY UNIDENTIFIED_DESC @104
+
+COPY ~dragondruid\coin\ddsx0b.spl~   ~override\ddsx0b.spl~
+
+COPY ~dragondruid\coin\ddsx0y.spl~   ~override\ddsx0y.spl~
+SAY NAME1 @100
+SAY UNIDENTIFIED_DESC @101
+
+COPY ~dragondruid\coin\ddsx0z.spl~   ~override\ddsx0z.spl~
+
+COPY ~dragondruid\bam~   ~override~
+
+ADD_KIT ~DDRawk~
+~DDRawk 1 0 1 1 0 0 0 1~
+~DDRawk 0 0 0 0 3 3 0 3 0 0 0 0 0 0 3 3 0 3 3 0 0 0 3 0 0 0 3 3 2 2 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~DDRawk 0 0 0 0 0 0~
+~DDRawk 0 0 0 0 0 0~
+~DDRawk 0 0 0 0 0 0~
+~DDRawk 0 0 0 0 0 0~
+~DDRawk 0 0 0 0 0 0 0 0 0~
+~DDRawk 0 0 0 0 0 0~
+~dragondruid\Awakening\ddr!awk.2DA~
+~~
+~0x10000000 19~
+~drd~
+~* * * * * * * * * * * * * * * * * * * *~
+SAY @182
+SAY @182
+SAY @183
+
+COPY ~dragondruid\Awakening\ddr!awk.2da~        ~override\ddr!awk.2da~
+
+COMPILE ~dragondruid\Awakening\ddr!ev02.baf~
+
+COPY ~dragondruid\Awakening\ddr!aw1.spl~        ~override\ddr!aw1.spl~
+SAY NAME1 @184
+
+COPY ~dragondruid\Awakening\ddr!ev03.spl~        ~override\ddr!ev03.spl~
+COPY ~dragondruid\Awakening\ddr!ev04.spl~        ~override\ddr!ev04.spl~
+COPY ~dragondruid\Awakening\ddr!ev08.spl~        ~override\ddr!ev08.spl~
+COPY ~dragondruid\Awakening\ddr!ev09.spl~        ~override\ddr!ev09.spl~
+
+COPY ~dragondruid\Awakening\ddr!ev05.spl~        ~override\ddr!ev05.spl~
+SAY NAME1 @191
+
+COPY ~dragondruid\Awakening\ddr!ev06.itm~        ~override\ddr!ev06.itm~
+SAY NAME1 @187
+SAY NAME2 @188
+SAY UNIDENTIFIED_DESC @159
+SAY IDENTIFIED_DESC @235
+
+COPY_EXISTING ~FIRKRA02.cre~ ~override/FIRKRA02.cre~
+ADD_CRE_ITEM ~ddr!ev06~ #0 #0 #0 ~unstealable~ ~inv13~
+
+COPY ~dragondruid\Awakening\ddr!ev07.spl~        ~override\ddr!ev07.spl~
+
+COPY ~dragondruid\Awakening\ddr!e101.spl~        ~override\ddr!e101.spl~
+
+COPY ~dragondruid\Awakening\ddr!e103.spl~        ~override\ddr!e103.spl~
+
+COPY ~dragondruid\Awakening\ddr!e108.spl~        ~override\ddr!e108.spl~
+
+COPY ~dragondruid\Awakening\ddr!e110.spl~        ~override\ddr!e110.spl~
+SAY NAME1 @112
+SAY UNIDENTIFIED_DESC @113
+
+COPY ~dragondruid\Awakening\ddr!e111.spl~        ~override\ddr!e111.spl~
+SAY NAME1 @204
+SAY UNIDENTIFIED_DESC @205
+
+COPY ~dragondruid\Awakening\ddr!e207.spl~        ~override\ddr!e207.spl~
+SAY NAME1 @218
+SAY UNIDENTIFIED_DESC @219
+
+COPY ~dragondruid\Awakening\ddr!e211.spl~        ~override\ddr!e211.spl~
+SAY NAME1 @66
+SAY UNIDENTIFIED_DESC @67
+
+COPY ~dragondruid\Awakening\ddr!e208.spl~        ~override\ddr!e208.spl~
+COPY ~dragondruid\Awakening\ddr!e104.spl~        ~override\ddr!e104.spl~
+COPY ~dragondruid\Awakening\ddr!e106.spl~        ~override\ddr!e106.spl~
+COPY ~dragondruid\Awakening\ddr!e213.spl~        ~override\ddr!e213.spl~
+SAY NAME1 @198
+SAY UNIDENTIFIED_DESC @199
+
+COPY ~dragondruid\Awakening\ddr!e209.spl~        ~override\ddr!e209.spl~
+SAY NAME1 @14
+SAY UNIDENTIFIED_DESC @15
+
+COPY ~dragondruid\Awakening\ddr!e210.spl~        ~override\ddr!e210.spl~
+
+COPY ~dragondruid\Awakening\ddr!e314.spl~        ~override\ddr!e314.spl~
+SAY NAME1 @116
+SAY UNIDENTIFIED_DESC @117
+
+COPY ~dragondruid\Awakening\ddr!e304.spl~        ~override\ddr!e304.spl~
+SAY NAME1 @206
+SAY UNIDENTIFIED_DESC @207
+
+COPY ~dragondruid\Awakening\ddr!e315.spl~        ~override\ddr!e315.spl~
+SAY NAME1 @202
+SAY UNIDENTIFIED_DESC @203
+
+COPY ~dragondruid\Awakening\ddr!e305.spl~        ~override\ddr!e305.spl~
+SAY NAME1 @192
+SAY UNIDENTIFIED_DESC @193
+
+COPY ~dragondruid\Awakening\ddr!e309.spl~        ~override\ddr!e309.spl~
+SAY NAME1 @214
+SAY UNIDENTIFIED_DESC @215
+
+COPY ~dragondruid\Awakening\ddr!e313.spl~        ~override\ddr!e313.spl~
+SAY NAME1 @16
+SAY UNIDENTIFIED_DESC @17
+
+COPY ~dragondruid\Awakening\ddr!e311.spl~        ~override\ddr!e311.spl~
+
+COPY ~dragondruid\Awakening\ddr!e312.spl~        ~override\ddr!e312.spl~
+
+ADD_PROJECTILE  ~dragondruid\pro\dd!pro2.pro~
+COPY ~dragondruid\Awakening\ddr!e303.spl~        ~override\ddr!e303.spl~
+SAY NAME1 @222
+SAY UNIDENTIFIED_DESC @223
+WRITE_SHORT 0x98 ~%dd!pro2%~
+
+COPY ~dragondruid\Awakening\ddr!e413.spl~        ~override\ddr!e413.spl~
+
+COPY ~dragondruid\Awakening\ddr!e411.spl~        ~override\ddr!e411.spl~
+
+ADD_PROJECTILE  ~dragondruid\pro\dd!pro4.pro~
+COPY ~dragondruid\Awakening\ddr!e416.spl~        ~override\ddr!e416.spl~
+SAY NAME1 @225
+SAY UNIDENTIFIED_DESC @226
+WRITE_SHORT 0x98 ~%dd!pro4%~
+
+COPY ~dragondruid\Awakening\ddr!e406.spl~        ~override\ddr!e406.spl~
+COPY ~dragondruid\Awakening\ddr!e405.spl~        ~override\ddr!e405.spl~
+SAY NAME1 @200
+SAY UNIDENTIFIED_DESC @201
+
+COPY ~dragondruid\Awakening\ddr!e410.spl~        ~override\ddr!e410.spl~
+
+COPY ~dragondruid\Awakening\ddr!e412.spl~        ~override\ddr!e412.spl~
+SAY NAME1 @194
+SAY UNIDENTIFIED_DESC @195
+COPY ~dragondruid\Awakening\ddr!412b.itm~        ~override\ddr!412b.itm~
+SAY NAME1 @194
+SAY NAME2 @194
+
+COPY ~dragondruid\Awakening\ddr!e414.spl~        ~override\ddr!e414.spl~
+SAY NAME1 @179
+SAY UNIDENTIFIED_DESC @224
+
+COPY ~dragondruid\Awakening\ddr!e415.spl~        ~override\ddr!e415.spl~
+SAY NAME1 @20
+SAY UNIDENTIFIED_DESC @21
+
+COPY ~dragondruid\Awakening\ddr!e508.spl~        ~override\ddr!e508.spl~
+
+COPY ~dragondruid\Awakening\ddr!e501.spl~        ~override\ddr!e501.spl~
+SAY NAME1 @196
+SAY UNIDENTIFIED_DESC @197
+
+COPY ~dragondruid\Awakening\ddr!e510.spl~        ~override\ddr!e510.spl~
+
+COPY ~dragondruid\Awakening\ddr!e511.spl~        ~override\ddr!e511.spl~
+SAY NAME1 @22
+SAY UNIDENTIFIED_DESC @23
+
+COPY ~dragondruid\Awakening\ddr!e513.spl~        ~override\ddr!e513.spl~
+SAY NAME1 @122
+SAY UNIDENTIFIED_DESC @123
+
+COPY ~dragondruid\Awakening\ddr!e505.spl~        ~override\ddr!e505.spl~
+
+COPY ~dragondruid\Awakening\ddr!e506.spl~        ~override\ddr!e506.spl~
+
+COPY ~dragondruid\Awakening\ddr!e512.spl~        ~override\ddr!e512.spl~
+
+ADD_PROJECTILE  ~dragondruid\pro\dd!pro7.pro~
+COPY ~dragondruid\Awakening\ddr!e516.spl~        ~override\ddr!e516.spl~
+SAY NAME1 @236
+SAY UNIDENTIFIED_DESC @237
+WRITE_SHORT 0x98 ~%dd!pro7%~
+
+COPY ~dragondruid\Awakening\ddr!e517.spl~        ~override\ddr!e517.spl~
+WRITE_SHORT 0x98 ~%dd!pro5%~
+
+COPY ~dragondruid\Awakening\ddr!e514.spl~        ~override\ddr!e514.spl~
+SAY NAME1 @155
+SAY UNIDENTIFIED_DESC @156
+
+COPY ~dragondruid\Awakening\ddr!502b.spl~        ~override\ddr!502b.spl~
+COPY ~dragondruid\Awakening\ddr!e502.spl~        ~override\ddr!e502.spl~
+SAY NAME1 @216
+SAY UNIDENTIFIED_DESC @217
+
+COPY ~dragondruid\Awakening\ddr!e515.spl~        ~override\ddr!e515.spl~
+SAY NAME1 @220
+SAY UNIDENTIFIED_DESC @221
+
+COPY ~dragondruid\Awakening\ddr!e602.spl~        ~override\ddr!e602.spl~
+SAY NAME1 @229
+SAY UNIDENTIFIED_DESC @230
+
+ADD_PROJECTILE  ~dragondruid\pro\dd!pro8.pro~
+COPY ~dragondruid\Awakening\ddr!e611.spl~        ~override\ddr!e611.spl~
+SAY NAME1 @233
+SAY UNIDENTIFIED_DESC @234
+WRITE_SHORT 0x98 ~%dd!pro8%~
+
+COPY ~dragondruid\Awakening\ddr!e612.spl~        ~override\ddr!e612.spl~
+
+COPY ~dragondruid\Awakening\ddr!e603.spl~        ~override\ddr!e603.spl~
+SAY NAME1 @208
+SAY UNIDENTIFIED_DESC @209
+
+COPY ~dragondruid\Awakening\ddr!e609.spl~        ~override\ddr!e609.spl~
+SAY NAME1 @26
+SAY UNIDENTIFIED_DESC @27
+
+COPY ~dragondruid\Awakening\ddr!e610.spl~        ~override\ddr!e610.spl~
+SAY NAME1 @24
+SAY UNIDENTIFIED_DESC @25
+WRITE_SHORT 0x98 ~%dd!pro3%~
+
+COPY ~dragondruid\Awakening\ddr!e606.spl~        ~override\ddr!e606.spl~
+
+COPY ~dragondruid\Awakening\ddr!e707.spl~        ~override\ddr!e707.spl~
+COPY ~dragondruid\Awakening\ddr!e605.spl~        ~override\ddr!e605.spl~
+SAY NAME1 @212
+SAY UNIDENTIFIED_DESC @213
+
+COPY ~dragondruid\Awakening\ddr!e608.spl~        ~override\ddr!e608.spl~
+
+COPY ~dragondruid\Awakening\ddr!e613.spl~        ~override\ddr!e613.spl~
+SAY NAME1 @157
+SAY UNIDENTIFIED_DESC @158
+
+COPY ~dragondruid\Awakening\ddr!e614.spl~        ~override\ddr!e614.spl~
+SAY NAME1 @161
+SAY UNIDENTIFIED_DESC @168
+
+COPY ~dragondruid\Awakening\ddr!e703.spl~        ~override\ddr!e703.spl~
+
+COPY ~dragondruid\Awakening\ddr!704b.eff~        ~override\ddr!704b.eff~
+COPY ~dragondruid\Awakening\ddr!704c.cre~        ~override\ddr!704c.cre~
+COPY ~dragondruid\Awakening\ddr!e704.spl~        ~override\ddr!e704.spl~
+SAY NAME1 @231
+SAY UNIDENTIFIED_DESC @232
+
+COPY ~dragondruid\Awakening\ddr!e705.spl~        ~override\ddr!e705.spl~
+
+COPY ~dragondruid\Awakening\ddr!e607.spl~        ~override\ddr!e607.spl~
+
+ADD_PROJECTILE  ~dragondruid\pro\dd!pro1.pro~
+COPY ~dragondruid\Awakening\ddr!e706.spl~        ~override\ddr!e706.spl~
+SAY NAME1 @210
+SAY UNIDENTIFIED_DESC @211
+WRITE_SHORT 0x98 ~%dd!pro1%~
+
+
+COPY ~dragondruid\Awakening\ddr!e709.spl~        ~override\ddr!e709.spl~
+
+COPY ~dragondruid\Awakening\ddr!e710.spl~        ~override\ddr!e710.spl~
+
+COPY ~dragondruid\Awakening\ddr!e711.spl~        ~override\ddr!e711.spl~
+SAY NAME1 @162
+SAY UNIDENTIFIED_DESC @169
+
+COPY ~dragondruid\Awakening\ddr!e712.spl~        ~override\ddr!e712.spl~
+SAY NAME1 @185
+SAY UNIDENTIFIED_DESC @186
+WRITE_SHORT 0x98 ~%dd!pro0%~
+
+

@@ -1,0 +1,15 @@
+IF
+  !HasItemEquiped("ddx002b",myself)
+THEN
+  RESPONSE #100
+  ReallyForceSpellRES("ddx002x",myself)
+END
+
+IF
+  Global("DDR!awk","LOCALS",1)
+  PartyHasItem("ddr!ev06")
+THEN
+  RESPONSE #100
+  TakePartyItemALL("ddr!ev06")
+  DestroyItem("ddr!ev06")
+END
