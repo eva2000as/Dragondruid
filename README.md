@@ -1,0 +1,1 @@
+A bgeet kit mod，As a druid of draconic bloodline, you gain attribute bonuses, extra spells, and the power to summon dragons as you level up, and you may even multiclass into a dragon sorcerer. Created by shadowword on the trow.cc forum, if there are copyright issues, please contact me to delete the project.
